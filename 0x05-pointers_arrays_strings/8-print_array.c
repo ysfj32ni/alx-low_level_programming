@@ -1,11 +1,10 @@
+#include "main.h"
 #include <stdio.h>
-
 /**
  * print_array - Entry Function
  * @a: int
  * @n: int
  */
-
 void print_array(int *a, int n)
 {
 	int i;
@@ -14,7 +13,9 @@ void print_array(int *a, int n)
 	{
 		printf("%d", a[i]);
 		if (i != (n - 1))
+		{
 			printf(", ");
+		}
 	}
 	printf("\n");
 }

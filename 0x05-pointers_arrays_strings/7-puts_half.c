@@ -1,8 +1,8 @@
+#include "main.h"
 /**
  * puts_half - Entry Function
  * @str: char
  */
-
 void puts_half(char *str)
 {
 	int index, half;
@@ -16,8 +16,8 @@ void puts_half(char *str)
 		half++;
 	while (half < index)
 	{
-		write(1, str[half], 1);
+		_putchar(str[half]);
 		half++;
 	}
-	write(1, '\n', 1);
+	_putchar('\n');
 }
