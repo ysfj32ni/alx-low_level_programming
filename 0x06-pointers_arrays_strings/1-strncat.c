@@ -4,21 +4,21 @@
  *@src: string
  *@n: integer
  *Return: dest (Success)
- */
+*/
 char *_strncat(char *dest, char *src, int n)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int i;
+	int j;
 
 	i = 0;
-	j = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[j] != '\0' && j < n)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
 		dest[i] = src[j];
+		i++;
 		j++;
-		i++;	
 	}
 	dest[i] = '\0';
 	return (dest);
