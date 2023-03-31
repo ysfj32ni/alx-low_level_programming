@@ -1,6 +1,7 @@
 /**
- *printf_number - Entry Function
- *@n: String
+ * print_number - printing number with puts
+ *
+ * @n: input int
  */
 void	_putchar(char n)
 {
@@ -8,11 +9,29 @@ void	_putchar(char n)
 }
 void print_number(int n)
 {
-	if (n >= 10)
+	/*Declaring variables*/
+	int count = 0, pow = 1;
+	unsigned int num = n;
+
+
+	if (n < 0) /*Evaluate this condition*/
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		_putchar('-');
+		num = -n;
 	}
-	else
-		_putchar (n + 48);
+	while (n != 0)
+	{
+		n /= 10;
+		count++;
+	}
+	while (count > 1)
+	{
+		pow *= 10;
+		count--;
+	}
+	while (pow >= 1)
+	{
+		_putchar(num / pow % 10 + '0');
+		pow /= 10;
+	}
 }
